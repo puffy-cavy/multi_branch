@@ -4,4 +4,4 @@
 export PATH=/usr/local/bin:$PATH
 export BRANCH=$GIT_BRANCH
 
-aws cloudformation deploy --stack-name ${BRANCH}-test-wendy --template-file script/cloudformation/${BRANCH}/template.json --parameter-overrides ParameterKey=BucketNameParameter,ParameterValue=${BRANCH}-wendy32 --profile default
+aws cloudformation deploy --stack-name ${BRANCH}-test-wendy --template-file script/cloudformation/${BRANCH}/template.json --parameters "ParameterKey=BucketNameParameter","ParameterValue=${BRANCH}-wendy32" --profile default
